@@ -1,4 +1,4 @@
-package controller.testController;
+package controller.threadController;
 
 import controller.domain.threadDemo1;
 import controller.domain.threadDemo2;

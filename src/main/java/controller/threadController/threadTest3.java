@@ -1,4 +1,4 @@
-package controller.testController;
+package controller.threadController;
 
 import java.util.concurrent.TimeUnit;
 
