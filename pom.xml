@@ -13,4 +13,14 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version> <!-- 用最新版本号替换 -->
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
 </project>
