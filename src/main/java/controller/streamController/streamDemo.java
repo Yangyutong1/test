@@ -17,7 +17,7 @@ public class streamDemo {
 //        getAuthor().stream().filter(e -> e.getName().length() > 3).forEach(e-> System.out.println(e.getName()));
 //        getAuthor().stream().map(e->e.getName()).forEach(e-> System.out.println(e));
 //        getAuthor().stream().distinct().forEach(e-> System.out.println(e.getName()));
-        
+        getAuthor().stream().distinct().sorted().forEach(e-> System.out.println(e.getAge()));
     }
 
     private static List<Stream> getAuthor() {
