@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.Comparator;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -23,7 +24,6 @@ public class Stream implements Comparable<Stream> {
     private String biaoqian;
 
     private Integer score;
-
 
     @Override
     public int compareTo(Stream other) {

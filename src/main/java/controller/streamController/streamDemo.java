@@ -2,8 +2,7 @@ package controller.streamController;
 
 import controller.domain.Stream;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -17,8 +16,42 @@ public class streamDemo {
 //        getAuthor().stream().filter(e -> e.getName().length() > 3).forEach(e-> System.out.println(e.getName()));
 //        getAuthor().stream().map(e->e.getName()).forEach(e-> System.out.println(e));
 //        getAuthor().stream().distinct().forEach(e-> System.out.println(e.getName()));
-        getAuthor().stream().distinct().sorted().forEach(e-> System.out.println(e.getAge()));
+//        getAuthor().stream().distinct().sorted().forEach(e-> System.out.println(e.getAge()));
+
+        //设置最大长度，剩余的将被扔掉
+//        getAuthor().stream().distinct().sorted().limit(2).forEach(e-> System.out.println(e.getAge()));
+
+        //跳过第一个元素，输出其他元素
+//        getAuthor().stream().distinct().sorted().skip(1).forEach(s-> System.out.println(s.getName()));
+
+        //最大值
+//        Optional<Integer> max = getAuthor().stream().map(e -> e.getAge()).max((s1, s2) -> s1 - s2);
+//        System.out.println(max.get());
+
+        //最小值
+//        Optional<Integer> min = getAuthor().stream().map(e -> e.getAge()).max((s1, s2) -> s2 - s1);
+//        System.out.println(min.get());
+
+//        List<Integer> collect = getAuthor().stream().map(e -> e.getAge()).collect(Collectors.toList());
+//        System.out.println(collect);
+
+        // 采用Map，key放name.value放年龄，
+        // 用到distinct因为，map的key不允许重复，需去重
+//        Map<String, Integer> collect1 = getAuthor().stream().distinct().collect(Collectors.toMap(e -> e.getName(), e -> e.getAge()));
+//        System.out.println(collect1);
+
+        //查看流中是否有年龄大于50的值
+//        boolean flag = getAuthor().stream().anyMatch(e -> e.getAge() > 50);
+//        System.out.println(flag);
+
+        //查看流中的所有元素，名字是否都包含 "测试" 两个字
+        boolean flag = getAuthor().stream().allMatch(e -> e.getName().contains("测试"));
+        System.out.println(flag);
     }
+
+
+
+
 
     private static List<Stream> getAuthor() {
         List list = new ArrayList<>();
