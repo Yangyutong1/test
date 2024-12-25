@@ -6,14 +6,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.Comparator;
-import java.util.List;
+import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Stream implements Comparable<Stream> {
+public class StreamTest implements Comparable<StreamTest> {
 
     private int id;
 
@@ -25,8 +24,10 @@ public class Stream implements Comparable<Stream> {
 
     private Integer score;
 
+    private BigDecimal shengao;
+
     @Override
-    public int compareTo(Stream other) {
+    public int compareTo(StreamTest other) {
         return Integer.compare(this.age, other.age); // 按照age字段进行排序（从小到大）
     }
 }
