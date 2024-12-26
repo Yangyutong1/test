@@ -9,7 +9,7 @@ public class optionalTest {
     public static void main(String[] args) {
 
         //采用Optional判空处理
-//        Stream stream = getAuthor2();
+//        StreamTest stream = getAuthor2();
 //        Optional.ofNullable(stream).ifPresent(s -> System.out.println(s.getName()));
 
         //采用静态方法，直接返回Optional对象

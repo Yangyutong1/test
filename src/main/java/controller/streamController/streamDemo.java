@@ -4,6 +4,7 @@ import controller.domain.StreamTest;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 //采用流的形式，去重打印年龄小于25岁的人名
@@ -47,11 +48,11 @@ public class streamDemo {
 //        System.out.println(flag);
 
         //去重，并过滤出年龄大于20岁，年龄的总合
-//        Integer reduce = getAuthor().stream().distinct().filter(e->e.getAge()>20).map(Stream::getAge).reduce(0, Integer::sum);
+//        Integer reduce = getAuthor().stream().distinct().filter(e->e.getAge()>20).map(StreamTest::getAge).reduce(0, Integer::sum);
 //        System.out.println(reduce);
 
         //身高总合
-//        BigDecimal reduce = getAuthor().stream().map(Stream::getShengao).reduce(BigDecimal.ZERO, BigDecimal::add);
+//        BigDecimal reduce = getAuthor().stream().map(StreamTest::getShengao).reduce(BigDecimal.ZERO, BigDecimal::add);
 //        System.out.println(reduce);
 
 //        getAuthor().stream()
@@ -67,8 +68,10 @@ public class streamDemo {
 //               .map(age->age+2)
 //               .forEach(age-> System.out.println(age));
 
-        Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        System.out.println(stream.filter(s -> s > 5).reduce(0, Integer::sum));
+//        Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+//        System.out.println(stream.filter(s -> s > 5).reduce(0, Integer::sum));
+
+//        new Thread(() -> System.out.println(Thread.currentThread().getName()),"AA").start();
 
     }
 
